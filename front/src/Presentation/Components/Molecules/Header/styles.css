@@ -1,0 +1,19 @@
+.container-header {
+    width: auto;
+    height: 8vh;
+    background-color: var(--fourth-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-header svg {
+    fill: white;
+}
+
+.line {
+    margin: 5px 0;
+    width: auto;
+    height: .7vh;
+    background-color: var(--fourth-color);
+}

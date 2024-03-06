@@ -1,0 +1,31 @@
+.container-logintemplate {
+    width: auto;
+    height: 100vh;
+}
+
+.content {
+    position: relative;
+    height: 90vh;
+    background: url("https://images.pexels.com/photos/1422408/pexels-photo-1422408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.container-login {
+    min-height: 25rem;
+    width: 30rem;
+    border: 3px solid #fafafa10;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+.glass-effect {
+    background: #fafafa10;
+    backdrop-filter: blur(0.6rem);
+}
+
+.blur-content {
+    background-color: transparent;
+    filter: blur(10px);
+}

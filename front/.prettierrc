@@ -1,0 +1,7 @@
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "semi": true,
+  "exclude": ["dist/**", "coverage/**", "*.module.css"],
+  "endOfLine": "auto"
+}

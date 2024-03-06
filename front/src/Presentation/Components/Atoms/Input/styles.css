@@ -1,0 +1,17 @@
+.input-form {
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid black;
+    width: 60%;
+    height: 30px;
+    font-size: 16px;
+    scrollbar-width: none;
+    -webkit-scrollbar-width: none;
+}
+
+.error-msg {
+    color: red;
+    margin: 10px;
+    font-weight: bolder;
+    font-style: italic;
+}

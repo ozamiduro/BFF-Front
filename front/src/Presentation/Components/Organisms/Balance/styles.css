@@ -1,0 +1,35 @@
+.container-balancec {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.content-info {
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    width: 50%;
+    margin: auto
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info span:first-child {
+    font-size: 20px;
+    width: 30%;
+    text-align: left;
+    border-bottom: 1px solid var(--fourth-color);
+    border-radius: 4px;
+}
+
+.info span:last-child {
+    border-top: 2px solid var(--fourth-color);
+    border-radius: 4px;
+    font-size: 24px;
+    width: 30%;
+    text-align: right;
+}

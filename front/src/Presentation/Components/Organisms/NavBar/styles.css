@@ -1,0 +1,38 @@
+.container-navbar {
+    width: 100%;
+    border-top: 5px solid var(--fourth-color);
+    border-bottom: 5px solid var(--fourth-color);
+    display: flex;
+    align-items: center;
+    gap: 60px
+}
+
+.options {
+    cursor: pointer;
+    background-color: var(--fourth-color);
+    color: white;
+    padding: 9px;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.options::before {
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    border-top: 38px solid transparent;
+    border-right: 52px solid var(--fourth-color);
+    top: 0;
+    left: -51px;
+}
+
+.options::after {
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    border-bottom: 38px solid transparent;
+    border-left: 52px solid var(--fourth-color);
+    top: 0;
+    right: -51px;
+}

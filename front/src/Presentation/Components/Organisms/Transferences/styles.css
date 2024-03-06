@@ -1,0 +1,21 @@
+.container-transfer {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 90%;
+    margin: auto;
+}
+
+.container-btns {
+    width: 20%;
+    border-left: 3px solid var(--fourth-color);
+    border-radius: 4px;
+}
+
+.inputs-container div {
+    margin: 15px 0px;
+}
+
+.inputs-container h3 {
+    margin: 5px;
+}
