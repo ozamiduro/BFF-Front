@@ -6,9 +6,23 @@ import { TransferenceLine } from '../../Atoms/TransferenceLine';
 
 import './styles.css';
 import { Form, Formik } from 'formik';
-import { Input } from '../../Atoms/Input/Input';
+import { Input } from '../../Atoms/Input';
 import { useTransference } from '../../../../Data/Hooks/Transference';
 
+/**
+ * Renders a Transferences component.
+ *
+ * Is a organisms responsible to present transferences history.
+ *
+ * **Usage example**
+ *
+ * **Default properties**
+ *  ```tsx
+ * <Transferences />
+ * ```
+ * ---
+ * @category Component
+ */
 const Transferences = () => {
   const [openModal, setOpenModal] = useState<boolean>(false);
 
@@ -21,6 +35,7 @@ const Transferences = () => {
     };
 
     unSub();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const initialValues = {

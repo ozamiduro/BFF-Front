@@ -4,6 +4,9 @@ import { loginRequest, registryRequest } from '../../../Domain/UseCases/Auth';
 import { AuthContext } from '../../../Domain/Model/Providers';
 import { useNavigate } from 'react-router';
 
+/**
+ * @function Hook responsible for the login process.
+ */
 export const useLogin = () => {
   const { setAuth } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -24,6 +27,9 @@ export const useLogin = () => {
   return { login };
 };
 
+/**
+ * @function Hook responsible for the registration process.
+ */
 export const useRegister = () => {
   const { setAuth } = useContext(AuthContext);
   const navigate = useNavigate();

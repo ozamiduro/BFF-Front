@@ -1,18 +1,13 @@
 import './App.css';
-import { Login } from './Presentation/Components/Pages/Login/Login';
 import { Navigate, Outlet, Route, Routes } from 'react-router';
-import { Home } from './Presentation/Components/Pages/Home/Home';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { User } from './Domain/Entity/User';
 import { AuthContext } from './Domain/Model/Providers';
+import { Login } from './Presentation/Pages/Login/Login';
+import { Home } from './Presentation/Pages/Home/Home';
 
 function App() {
   const [auth, setAuth] = useState<User | undefined>(undefined);
-
-  useEffect(() => {
-    console.log('El');
-    console.log(auth);
-  }, [auth, setAuth]);
 
   const AuthProvider = () => {
     return (

@@ -1,7 +1,30 @@
+/**
+ * The props type for {@link Reload}.
+ */
 interface Props {
+  /** The width of the icon. Defaults to `50`. */
   width?: number;
+  /** The height of the icon. Defaults to `50`. */
   height?: number;
 }
+
+/**
+ * Renders a component with Reload icon.
+ *
+ * **Usage example**
+ *
+ * **Default properties**
+ *  ```tsx
+ *  <Reload />
+ *  ```
+ *  ---
+ * **Width and height Properties**
+ *  ```tsx
+ *  <Reload height={20} width={20} />
+ *  ```
+ * ---
+ * @category Icon
+ */
 
 const Reload = ({ height = 50, width = 50 }: Props) => {
   return (

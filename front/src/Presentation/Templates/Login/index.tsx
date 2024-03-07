@@ -1,10 +1,24 @@
 import { useState } from 'react';
-import { Header } from '../../Molecules/Header';
-import { RegisterForm } from '../../Organisms/RegisterForm';
 import './styles.css';
-import { LoginForm } from '../../Organisms/LoginForm';
-import { Button } from '../../Atoms/Button';
+import { Header } from '../../Components/Molecules/Header';
+import { LoginForm } from '../../Components/Organisms/LoginForm';
+import { Button } from '../../Components/Atoms/Button';
+import { RegisterForm } from '../../Components/Organisms/RegisterForm';
 
+/**
+ * Renders a Login template.
+ *
+ * Is the Login's template. It contains all of the authentication.
+ *
+ * **Usage example**
+ *
+ * **Default properties**
+ *  ```tsx
+ * <LoginTemplate />
+ * ```
+ * ---
+ * @category Template
+ */
 const LoginTemplate = () => {
   const [isLogin, setIsLogin] = useState<boolean>(true);
 

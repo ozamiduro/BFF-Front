@@ -1,5 +1,18 @@
 import './style.css';
 
+/**
+ * Renders a component with Bank icon.
+ *
+ * **Usage example**
+ *
+ * **Default properties**
+ *  ```tsx
+ *  <Bank />
+ *  ```
+ * ---
+ * @category Icon
+ */
+
 const Bank = () => {
   return (
     <div className="container-icon">

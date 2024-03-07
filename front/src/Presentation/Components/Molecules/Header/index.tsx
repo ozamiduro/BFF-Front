@@ -5,6 +5,20 @@ import './styles.css';
 import { AuthContext } from '../../../../Domain/Model/Providers';
 import { useNavigate } from 'react-router';
 
+/**
+ * Renders a Header component.
+ *
+ * Is a molecule responsible of the App's header.
+ *
+ * **Usage example**
+ *
+ * **Default properties**
+ *  ```tsx
+ * <Header />
+ * ```
+ * ---
+ * @category Component
+ */
 const Header = () => {
   const navigate = useNavigate();
   const { auth, setAuth } = useContext(AuthContext);

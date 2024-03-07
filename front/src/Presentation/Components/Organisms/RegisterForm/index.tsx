@@ -1,12 +1,31 @@
 import { Formik, Form, ErrorMessage } from 'formik';
 import { Title } from '../../Atoms/Title';
-import { Input } from '../../Atoms/Input/Input';
+import { Input } from '../../Atoms/Input';
 import { Button } from '../../Atoms/Button';
 import { RegisterFormProps } from './type';
 
 import './styles.css';
 import { useRegister } from '../../../../Data/Hooks/Auth';
 
+/**
+ * Renders a RegisterForm component.
+ *
+ * Is a organisms responsible to present the register form.
+ *
+ * **Usage example**
+ *
+ * **Default properties**
+ *  ```tsx
+ * <RegisterForm />
+ * ```
+ * ---
+ * **Children property**
+ *  ```tsx
+ * <RegisterForm children={<button>Hi!</button>} />
+ * ```
+ * ---
+ * @category Component
+ */
 const RegisterForm = ({ children }: RegisterFormProps) => {
   const { register } = useRegister();
 

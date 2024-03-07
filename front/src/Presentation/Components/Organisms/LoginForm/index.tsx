@@ -1,10 +1,29 @@
 import { Form, Formik } from 'formik';
-import { Input } from '../../Atoms/Input/Input';
+import { Input } from '../../Atoms/Input';
 import { Button } from '../../Atoms/Button';
 import { Title } from '../../Atoms/Title';
 import { LoginFormProps } from './type';
 import { useLogin } from '../../../../Data/Hooks/Auth';
 
+/**
+ * Renders a LoginForm component.
+ *
+ * Is a organisms responsible to present the login form.
+ *
+ * **Usage example**
+ *
+ * **Default properties**
+ *  ```tsx
+ * <LoginForm />
+ * ```
+ * ---
+ * **Children property**
+ *  ```tsx
+ * <LoginForm children={<button>Hi!</button>} />
+ * ```
+ * ---
+ * @category Component
+ */
 const LoginForm = ({ children }: LoginFormProps) => {
   const { login } = useLogin();
 

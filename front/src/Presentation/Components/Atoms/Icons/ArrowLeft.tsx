@@ -1,6 +1,28 @@
+/**
+ * The props type for {@link ArrowLeft}.
+ */
 interface Props {
+  /** A void function. Can be optional. */
   onClick?: () => void;
 }
+
+/**
+ * Renders a component with ArrowLeft icon.
+ *
+ * **Usage example**
+ *
+ * **Default properties**
+ *  ```tsx
+ *  <ArrowLeft />
+ *  ```
+ *  ---
+ * **OnClick Property**
+ *  ```tsx
+ *  <ArrowLeft onClick={() => console.log('hey')} />
+ *  ```
+ * ---
+ * @category Icon
+ */
 
 const ArrowLeft = ({ onClick }: Props) => {
   return (

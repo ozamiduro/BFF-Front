@@ -5,6 +5,20 @@ import './styles.css';
 import { useInformation } from '../../../../Data/Hooks/Information';
 import { useEffect } from 'react';
 
+/**
+ * Renders a Balance component.
+ *
+ * Is a organisms responsible to have all balance elements.
+ *
+ * **Usage example**
+ *
+ * **Default properties**
+ *  ```tsx
+ * <Balance />
+ * ```
+ * ---
+ * @category Component
+ */
 const Balance = () => {
   const { userInfo, information } = useInformation();
 
@@ -14,10 +28,11 @@ const Balance = () => {
     };
 
     unSub();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div>
+    <>
       <Title title={'Información básica'} />
       <div className={'content-info'}>
         <div className={'info'}>
@@ -39,7 +54,7 @@ const Balance = () => {
           reloadOnClick={() => information()}
         />
       </div>
-    </div>
+    </>
   );
 };
 

@@ -6,6 +6,9 @@ import { Balance } from '../../../Domain/Entity/Balance';
 
 type UserInfo = User & Exclude<Balance, 'idUser'>;
 
+/**
+ * @function Hook responsible for the managment basic information.
+ */
 export const useInformation = () => {
   const { auth } = useContext(AuthContext);
 

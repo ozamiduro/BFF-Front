@@ -1,38 +1,44 @@
 .container-modal {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    background-color: #0000009c;
-    display: grid;
-    place-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  background-color: #0000009c;
+  display: grid;
+  place-items: center;
 }
 
 .content-modal {
-    background-color: var(--main-color);
-    width: 50vw;
-    height: fit-content;
-    margin: auto;
-    border-radius: 20px;
-    padding-bottom: 20px;
+  background-color: var(--main-color);
+  width: 50vw;
+  height: fit-content;
+  margin: auto;
+  border-radius: 20px;
+  padding-bottom: 20px;
 }
 
 .content-modal header {
-    display: flex;
-    justify-content: center;
-    padding-top: 15px;
-    position: relative;
-    padding-bottom: 6px;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  position: relative;
+  padding-bottom: 6px;
 }
 
 .content-modal header button {
-    position: absolute;
-    right: 14px;
-    top: 7px;
+  position: absolute;
+  right: 14px;
+  top: 7px;
 }
 
 .content-modal header span {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media (width <= 950px) {
+  .content-modal {
+    width: 90vw;
+  }
 }

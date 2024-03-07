@@ -9,6 +9,10 @@ import {
   Transference,
 } from '../../../Domain/Entity/Transference';
 
+/**
+ * @function Hook responsible for the managment of transferences.
+ * For get all the transferences and make a transference.
+ */
 export const useTransference = () => {
   const { auth } = useContext(AuthContext);
   const [transferences, setTransferences] = useState<
