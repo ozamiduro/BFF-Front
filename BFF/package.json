@@ -5,11 +5,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/index.ts",
-    "build": "tsc --project ."
+    "build": "tsc --project .",
+    "docs": "node src/docs/swagger.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
