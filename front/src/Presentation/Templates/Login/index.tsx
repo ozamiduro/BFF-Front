@@ -13,6 +13,7 @@ import { RegisterForm } from '../../Components/Organisms/RegisterForm';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <LoginTemplate />
  * ```

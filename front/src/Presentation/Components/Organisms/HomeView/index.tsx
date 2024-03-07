@@ -10,11 +10,13 @@ import { HomeViewProps } from './type';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <HomeView />
  * ```
  *
  * **View property**
+ *
  *  ```tsx
  * <HomeView view={'balance'}/>
  * ```

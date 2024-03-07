@@ -8,6 +8,7 @@ import { HomeTemplate } from '../../Templates/Home';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <Home />
  * ```

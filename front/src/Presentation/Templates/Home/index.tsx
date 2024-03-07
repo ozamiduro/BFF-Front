@@ -12,6 +12,7 @@ import { HomeView } from '../../Components/Organisms/HomeView';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <HomeTemplate />
  * ```

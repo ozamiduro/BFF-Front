@@ -11,11 +11,13 @@ import { NavBarProps } from './type';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <NavBar options={[name: 'Saldo', option: 'balance']} />
  * ```
  * ---
  * **OnClick property**
+ *
  *  ```tsx
  * const [views, setViews] = useState<Options>('balance');
  * <NavBar options={[name: 'Saldo', option: 'balance']} onClick={setViews} />

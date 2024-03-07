@@ -14,11 +14,13 @@ interface Props {
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  *  <Reload />
  *  ```
  *  ---
  * **Width and height Properties**
+ *
  *  ```tsx
  *  <Reload height={20} width={20} />
  *  ```

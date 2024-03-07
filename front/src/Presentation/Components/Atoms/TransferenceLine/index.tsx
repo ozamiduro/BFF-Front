@@ -14,6 +14,7 @@ import { TransferenceLineProps } from './types';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <TransferenceLine data={[{
  *    id: 1,

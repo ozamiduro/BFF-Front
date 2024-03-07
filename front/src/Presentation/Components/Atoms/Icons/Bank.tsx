@@ -6,6 +6,7 @@ import './style.css';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  *  <Bank />
  *  ```

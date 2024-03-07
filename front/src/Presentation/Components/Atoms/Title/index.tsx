@@ -11,16 +11,19 @@ import type { TitleProps } from './type';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <Title title={'title'} />
  * ```
  * ---
  * **Color property**
+ *
  * ```tsx
  * <Title title={'title'} color={'white'}/>
  * ```
  * ---
  * **CSSProperties property**
+ *
  * ```tsx
  * <Title title={'title'} styles={{ backgroundColor: 'red' }}/>
  * ```

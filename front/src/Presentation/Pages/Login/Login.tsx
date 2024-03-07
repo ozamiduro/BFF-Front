@@ -8,6 +8,7 @@ import { LoginTemplate } from '../../Templates/Login';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <Login />
  * ```

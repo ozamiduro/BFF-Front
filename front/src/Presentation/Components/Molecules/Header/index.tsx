@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <Header />
  * ```

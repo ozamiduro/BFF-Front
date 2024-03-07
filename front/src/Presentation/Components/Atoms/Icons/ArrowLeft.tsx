@@ -17,6 +17,7 @@ interface Props {
  *  ```
  *  ---
  * **OnClick Property**
+ *
  *  ```tsx
  *  <ArrowLeft onClick={() => console.log('hey')} />
  *  ```

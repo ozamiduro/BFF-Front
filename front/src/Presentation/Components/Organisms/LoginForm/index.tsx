@@ -13,11 +13,13 @@ import { useLogin } from '../../../../Data/Hooks/Auth';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <LoginForm />
  * ```
  * ---
  * **Children property**
+ *
  *  ```tsx
  * <LoginForm children={<button>Hi!</button>} />
  * ```

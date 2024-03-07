@@ -14,21 +14,25 @@ import './styles.css';
  * **Usage example**
  *
  * **Default properties**
+ *
  * ```tsx
  * <Button text={'My button'} />
  * ```
  * ---
  * **OnClick property**
+ *
  * ```tsx
  * <Button text={'My button'} onClick={() => console.log('hey')} />
  * ```
  * ---
  * **Type property**
+ *
  * ```tsx
  * <Button text={'My button'} type={'submit'} />
  * ```
  * ---
  * **Children property**
+ *
  * ```tsx
  * <Button text={'My button'} children={<span>I'm an a children</span>} />
  * ```

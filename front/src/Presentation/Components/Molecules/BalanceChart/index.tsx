@@ -16,11 +16,13 @@ import { CashConverter } from '../../Atoms/CashConverter';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <BalanceChart balance={200000} />
  * ```
  * ---
  * **ReloadOnClick property**
+ *
  * ```tsx
  * <BalanceChart balance={200000} />
  * ```

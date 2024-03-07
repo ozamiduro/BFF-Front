@@ -30,7 +30,7 @@
     "dev": "react-scripts start",
     "lint": "eslit .",
     "lint:fix": "eslint --fix .",
-    "docs": "typedoc"
+    "docs": "typedoc --entryPointStrategy expand --tsconfig ./tsconfig.json"
   },
   "eslintConfig": {
     "extends": [

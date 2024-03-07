@@ -13,6 +13,7 @@ import { useEffect } from 'react';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <Balance />
  * ```

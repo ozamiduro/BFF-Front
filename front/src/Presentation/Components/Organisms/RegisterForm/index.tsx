@@ -15,11 +15,13 @@ import { useRegister } from '../../../../Data/Hooks/Auth';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <RegisterForm />
  * ```
  * ---
  * **Children property**
+ *
  *  ```tsx
  * <RegisterForm children={<button>Hi!</button>} />
  * ```

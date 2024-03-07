@@ -14,16 +14,19 @@ import './styles.css';
  * **Usage example**
  *
  * **Default properties**
+ *
  * ```tsx
  * <Input name={'id'} />
  * ```
  * ---
  * **Type property**
+ *
  * ```tsx
  * <Input name={'id'} type={'number'} />
  * ```
  * ---
  * **Placeholder property**
+ *
  * ```tsx
  * <Input name={'id'} placeholder={'Ingrese su identificación'} />
  * ```

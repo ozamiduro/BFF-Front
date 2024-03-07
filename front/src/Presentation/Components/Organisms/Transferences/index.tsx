@@ -17,6 +17,7 @@ import { useTransference } from '../../../../Data/Hooks/Transference';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * <Transferences />
  * ```

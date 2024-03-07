@@ -10,11 +10,13 @@ import { CashConverterProps } from './type';
  * **Usage example**
  *
  * **Default properties**
+ *
  * ```tsx
  * <CashConverter balance={20000} />
  * ```
  * ---
  * **ISOcode property**
+ *
  * ```tsx
  * <CashConverter balance={20000} ISOcode={'EUR'} />
  * ```

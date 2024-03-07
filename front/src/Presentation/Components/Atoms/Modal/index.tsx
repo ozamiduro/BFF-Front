@@ -13,18 +13,21 @@ import { ModalProps } from './types';
  * **Usage example**
  *
  * **Default properties**
+ *
  *  ```tsx
  * const [openModal, setOpenModal] = useState<boolean>(false);
  * <Modal setModal={setOpenModal} title={'Realizar transferencia'}></Modal>;
  * ```
  * ---
  * **Title property**
+ *
  * ```tsx
  * const [openModal, setOpenModal] = useState<boolean>(false);
  * <Modal setModal={setOpenModal} title={"This is my modal's title"}></Modal>;
  * ```
  * ---
  * **Children property**
+ *
  * ```tsx
  * const [openModal, setOpenModal] = useState<boolean>(false);
  * <Modal setModal={setOpenModal}>
