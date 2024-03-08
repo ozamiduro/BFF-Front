@@ -1,28 +1,32 @@
 import type { NextFunction, Request, Response } from "express";
-import { User } from "../entitites/User.entity";
-import { Balance } from "../entitites/Balance.entity";
+import { requestGET } from "../utils/requests/requests";
 
 export const getInformationById = async (
   request: Request,
   response: Response,
   next: NextFunction
 ): Promise<void> => {
-  const user = new User(
-    232,
-    "Fabian Piraneque",
-    "fabianpiraneque@meli.com",
-    new Date(2024, 2, 30)
-  );
-
-  const balance = new Balance(1, 232, 3144324432);
+  const idUser = request.params.id;
 
   try {
-    const idUser = request.params.id;
+    const resultClient = await requestGET("CLIENT", `/clients/${idUser}`);
+    const resultWallet = await requestGET(
+      "TRANSACTIONS",
+      `/wallets/user/${resultClient.id}`
+    );
+    const totalCashInTransactions = resultWallet.reduce(
+      (acc: number, curr: any) => {
+        return acc + curr.amount;
+      },
+      0
+    );
 
     const data = {
-      ...user,
-      idBalance: balance.id,
-      balance: balance.balance,
+      id: resultClient.id,
+      name: resultClient.name,
+      email: resultClient.email,
+      birth: resultClient.birth,
+      totalCashInTransactions: totalCashInTransactions,
     };
 
     response.send({

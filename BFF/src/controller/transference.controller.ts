@@ -3,67 +3,23 @@ import {
   SendTransference,
   Transference,
 } from "../entitites/Transference.entity";
+import { requestGET, requestPOST } from "../utils/requests/requests";
 
 export const getTransferences = async (
   request: Request,
   response: Response,
   next: NextFunction
 ): Promise<void> => {
-  const transference1 = new Transference(
-    1,
-    "Pepito Cardenas",
-    432434,
-    new Date(2024, 2, 31)
-  );
-  const transference2 = new Transference(
-    1,
-    "Pepito Cardenas",
-    432434,
-    new Date(2024, 2, 31)
-  );
-  const transference3 = new Transference(
-    1,
-    "Pepito Cardenas",
-    432434,
-    new Date(2024, 2, 31)
-  );
-  const transference4 = new Transference(
-    1,
-    "Pepito Cardenas",
-    432434,
-    new Date(2024, 2, 31)
-  );
-  const transference5 = new Transference(
-    1,
-    "Pepito Cardenas",
-    432434,
-    new Date(2024, 2, 31)
-  );
-  const transference6 = new Transference(
-    1,
-    "Pepito Cardenas",
-    432434,
-    new Date(2024, 2, 31)
-  );
-  const transference7 = new Transference(
-    1,
-    "Camilo Cardenas",
-    432434432545,
-    new Date(2024, 1, 21)
-  );
-  const allTransferences = [
-    transference1,
-    transference2,
-    transference3,
-    transference4,
-    transference5,
-    transference6,
-    transference7,
-  ];
+  const id = request.params.id;
 
   try {
+    const resultWallet = await requestGET(
+      "TRANSACTIONS",
+      `/wallets/user/${id}`
+    );
+
     response.send({
-      data: allTransferences,
+      data: resultWallet,
       timestamp: new Date(),
     });
   } catch (error) {
@@ -76,16 +32,23 @@ export const postTransference = async (
   response: Response,
   next: NextFunction
 ): Promise<void> => {
-  const transference = new SendTransference(
-    232,
-    3254543,
-    4326565424,
-    new Date(2024, 2, 31)
-  );
+  const { name, userId, amount } = request.body;
+
+  const dataToSend = {
+    name,
+    userId,
+    amount,
+  };
 
   try {
+    const resultWallet = await requestPOST(
+      "TRANSACTIONS",
+      "/wallets",
+      dataToSend
+    );
+
     response.status(201).send({
-      data: transference,
+      data: resultWallet,
       timestamp: new Date(),
     });
   } catch (error) {

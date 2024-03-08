@@ -1,5 +1,6 @@
 import express, { type Application } from "express";
 import { routes } from "./route/index.route";
+const dotenv = require("dotenv");
 const cors = require("cors");
 const swaggerUI = require("swagger-ui-express");
 

@@ -11,7 +11,7 @@ const getOptions = (env: string) => {
       };
     case "production":
       return {
-        origin: ["http://3.14.228.227:80"],
+        origin: [process.env.FRONT_URL],
         credentials: true,
       };
     default:

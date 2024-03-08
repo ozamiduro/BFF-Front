@@ -2,12 +2,12 @@ export class User {
   id: number;
   name: string;
   email: string;
-  date: Date;
+  birth: Date;
 
-  constructor(id: number, name: string, email: string, date: Date) {
+  constructor(id: number, name: string, email: string, birth: Date) {
     this.id = id;
     this.name = name;
     this.email = email;
-    this.date = date;
+    this.birth = birth;
   }
 }

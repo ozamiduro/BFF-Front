@@ -1,23 +1,22 @@
 import { type RequestHandler, Router } from "express";
-import { postLogin, postRegistry } from "../controller/auth.controller";
+import { getLogin, postRegistry } from "../controller/auth.controller";
 
 export const authRouter = Router();
 
 /**
  * @swagger
- * /api/auth/login:
- *   post:
+ * /api/auth/login/:id:
+ *   get:
  *     description: Return user information
- *     requestBody:
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               id:
- *                 type: integer
- *             example:
- *               id: 123
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         description: Parameter with the user ID
+ *         schema:
+ *           type: integer
+ *           format: int64
+ *           minimun: 1
  *     responses:
  *       200:
  *         description: Resource user found successfully
@@ -35,7 +34,7 @@ export const authRouter = Router();
  *               data:
  *                 id: 123
  */
-authRouter.post("/login", postLogin as RequestHandler);
+authRouter.get("/login/:id", getLogin as RequestHandler);
 
 /**
  * @swagger
