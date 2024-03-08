@@ -1,3 +1,4 @@
+import { useId } from 'react';
 import './styles.css';
 import { NavBarProps } from './type';
 
@@ -29,8 +30,15 @@ const NavBar = ({ options, onClick }: NavBarProps) => {
   return (
     <nav className={'container-navbar'}>
       {options.map((ops) => {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        const id = useId();
+
         return (
-          <div className={'options'} onClick={() => onClick(ops.option)}>
+          <div
+            key={id}
+            className={'options'}
+            onClick={() => onClick(ops.option)}
+          >
             {ops.name}
           </div>
         );

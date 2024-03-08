@@ -35,7 +35,7 @@ const RegisterForm = ({ children }: RegisterFormProps) => {
     id: '',
     email: '',
     name: '',
-    date: '',
+    birth: '',
   };
 
   const validation = (values: any) => {
@@ -52,14 +52,11 @@ const RegisterForm = ({ children }: RegisterFormProps) => {
       });
     } else {
       val.forEach((el, index) => {
-        console.log(typeof el[1] === typesInitialValues[index]);
         if (typeof el[1] !== typesInitialValues[index]) {
           errors[el[0]] = 'Campo invalido';
         }
       });
     }
-
-    console.log(errors);
 
     return errors;
   };
@@ -99,13 +96,13 @@ const RegisterForm = ({ children }: RegisterFormProps) => {
                 <span>Fecha de nacimiento</span>
                 <input
                   type={'date'}
-                  name={'date'}
+                  name={'birth'}
                   onChange={(el) => {
-                    setFieldValue('date', el.target.value);
+                    setFieldValue('birth', el.target.value);
                   }}
                   placeholder={'Ingrese su fecha de nacimiento'}
                 />
-                <ErrorMessage name={'date'}>
+                <ErrorMessage name={'birth'}>
                   {(msg: string) => <div className={'error-msg'}>{msg}</div>}
                 </ErrorMessage>
               </div>

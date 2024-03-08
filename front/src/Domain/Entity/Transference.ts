@@ -5,21 +5,21 @@ export interface Transference {
   /** The Transference's ID. */
   id: number;
   /** The person name who did the transference. */
-  personName: string;
+  name: string;
   /** The amount of the transference. */
   amount: number;
   /** The date when the transference was done. */
-  date: Date;
+  createdAt: Date;
 }
 
 /**
  * The SendTransference interface.
  */
 export interface SendTransference {
-  /** The SendTransference's ID. */
-  id: number;
-  /** The User's ID who will received the amount. */
-  idToSend: number;
+  /** The name who will receive the transference. */
+  name: string;
+  /** The User's ID who do the transference. */
+  userId: number;
   /** The amount of the transference. */
   amount: number;
 }

@@ -1,9 +1,8 @@
 import axios from 'axios';
-import { User } from '../../Entity/User';
-import { SendTransference } from '../../Entity/Transference';
+import { User } from '../../Domain/Entity/User';
+import { SendTransference } from '../../Domain/Entity/Transference';
 
-// const baseUrl = `${process.env.REACT_APP_BACKEND_URL}/auth`;
-const baseUrl = `http://localhost:3001/api`;
+const baseUrl = `${process.env.REACT_APP_BFF}`;
 
 /**
  * @param id The id of the user

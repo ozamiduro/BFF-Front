@@ -18,9 +18,9 @@ import { TransferenceLineProps } from './types';
  *  ```tsx
  * <TransferenceLine data={[{
  *    id: 1,
- *    personName: "Pepito Perez",
+ *    name: "Pepito Perez",
  *    amount: 12345543,
- *    date: new Date()
+ *    createdAt: new Date()
  * }]} />
  * ```
  * ---
@@ -31,13 +31,19 @@ const TransferenceLine = ({ data }: TransferenceLineProps) => {
     <div className={'container-vertical-line'}>
       {data.map((d) => {
         return (
-          <div className={'box'}>
+          <div key={d.id} className={'box'}>
             <h2>
               <CashConverter balance={d.amount} />
             </h2>
-            <p>{d.personName}</p>
+            <p>
+              <strong>ID de la transferencia:</strong> {d.id}
+            </p>
+            <p>
+              <strong>Para la persona:</strong> {d.name}
+            </p>
             <span>
-              <i>{format(d.date, { date: 'full', time: 'short' })}</i>
+              <strong>Fecha de la transacción: </strong>
+              <i>{format(d.createdAt, { date: 'full', time: 'short' })}</i>
             </span>
           </div>
         );

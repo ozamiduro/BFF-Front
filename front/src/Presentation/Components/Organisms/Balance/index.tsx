@@ -1,6 +1,8 @@
 import { BalanceChart } from '../../Molecules/BalanceChart';
 import { Title } from '../../Atoms/Title';
 
+import { format } from '@formkit/tempo';
+
 import './styles.css';
 import { useInformation } from '../../../../Data/Hooks/Information';
 import { useEffect } from 'react';
@@ -48,10 +50,21 @@ const Balance = () => {
           </span>
           <span>{userInfo?.name}</span>
         </div>
+        <div className={'info'}>
+          <span>
+            <strong>Fecha de nacimiento</strong>
+          </span>
+          <span>
+            {format(userInfo?.birth ?? new Date(), {
+              date: 'long',
+            })}
+          </span>
+        </div>
       </div>
       <div className={'container-balancec'}>
+        <Title title={'Monto total de las transacciones realizadas'} />
         <BalanceChart
-          balance={userInfo?.balance ?? 0}
+          balance={userInfo?.totalCashInTransactions ?? 0}
           reloadOnClick={() => information()}
         />
       </div>

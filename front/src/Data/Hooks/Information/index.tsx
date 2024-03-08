@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../../Domain/Model/Providers';
-import { informationRequest } from '../../../Domain/UseCases/Information';
+import { informationRequest } from '../../../Controllers/Information';
 import { User } from '../../../Domain/Entity/User';
 import { Balance } from '../../../Domain/Entity/Balance';
 

@@ -40,13 +40,13 @@ const Transferences = () => {
   }, []);
 
   const initialValues = {
-    id: '',
-    idToSend: '',
+    name: '',
     amount: '',
   };
 
   const validation = (values: any) => {
     const errors: any = {};
+    const typesInitialValues = ['string', 'number'];
     const val = Object.entries(values);
 
     if (val.some((el) => !el[1])) {
@@ -56,8 +56,8 @@ const Transferences = () => {
         }
       });
     } else {
-      val.forEach((el) => {
-        if (isNaN(Number(el[1]))) {
+      val.forEach((el, index) => {
+        if (typeof el[1] !== typesInitialValues[index]) {
           errors[el[0]] = 'Campo invalido';
         }
       });
@@ -69,6 +69,7 @@ const Transferences = () => {
   const onSubmit = async (values: any) => {
     const result: number | undefined = await postTransference(values);
     if (result && result === 201) {
+      await getTransferences();
       setOpenModal(false);
     }
   };
@@ -98,27 +99,19 @@ const Transferences = () => {
                   <Form className={'form-container'}>
                     <div className={'inputs-container'}>
                       <div>
-                        <h3>Cédula</h3>
+                        <h3>Nombre de la persona a recibir la transferencia</h3>
                         <Input
-                          type={'number'}
-                          name={'id'}
-                          placeholder={'Ingrese su cédula'}
+                          type={'text'}
+                          name={'name'}
+                          placeholder={'Ingrese el nombre de la persona'}
                         />
                       </div>
                       <div>
-                        <h3>Cédula de la persona a enviar</h3>
-                        <Input
-                          type={'number'}
-                          name={'idToSend'}
-                          placeholder={'Ingrese su cédula de la otra persona'}
-                        />
-                      </div>
-                      <div>
-                        <h3>Saldo</h3>
+                        <h3>Cantidad</h3>
                         <Input
                           type={'number'}
                           name={'amount'}
-                          placeholder={'Ingrese el saldo'}
+                          placeholder={'Ingrese la cantidad de la transacción'}
                         />
                       </div>
                     </div>
@@ -132,7 +125,7 @@ const Transferences = () => {
                         gap: 10,
                       }}
                     >
-                      <Button type={'submit'} text={'Ingresar'} />
+                      <Button type={'submit'} text={'Realizar transacción'} />
                     </div>
                   </Form>
                 );

@@ -9,5 +9,5 @@ export interface User {
   /** The User's email. */
   email: string;
   /** The User's birthday. */
-  date: string;
+  birth: string;
 }

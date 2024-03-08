@@ -1,46 +1,46 @@
 .container-vertical-line {
-    width: -webkit-fill-available;
+  width: -webkit-fill-available;
+  display: grid;
+  place-content: center;
 }
 
 .box {
-    position: relative;
-    width: 30%;
-    margin: auto;
-    margin-bottom: 10px;
-    text-align: left;
-    padding: 0px 30px;
-    font-family: "PT Sans", sans-serif;
+  position: relative;
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 0px 30px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .box::before {
-    content: "";
-    position: absolute;
-    width: 3px;
-    height: 120%;
-    background: var(--fourth-color);
-    left: 7px;
-    top: 10px;
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 120%;
+  background: var(--fourth-color);
+  left: 7px;
+  top: 10px;
 }
 
 .box::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--secondary-color);
-    left: -1px;
-    top: 10px;
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  left: -1px;
+  top: 10px;
 }
 
 .box h2 {
-    padding: 0;
-    margin: 0px;
-    padding-top: 5px;
+  padding: 0;
+  margin: 0px;
+  padding-top: 5px;
 }
 
 .box p {
-    padding: 0;
-    margin: 0px;
-    padding-top: 2px;
+  padding: 0;
+  margin: 0px;
+  padding-top: 2px;
 }

@@ -7,5 +7,5 @@ export interface Balance {
   /** The User's ID. */
   idUser: number;
   /** The amount in account. */
-  balance: number;
+  totalCashInTransactions: number;
 }

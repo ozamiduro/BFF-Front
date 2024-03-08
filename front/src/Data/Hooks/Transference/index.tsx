@@ -3,11 +3,12 @@ import { AuthContext } from '../../../Domain/Model/Providers';
 import {
   getTransferencesRequest,
   postTransferenceRequest,
-} from '../../../Domain/UseCases/Transference';
+} from '../../../Controllers/Transference';
 import {
   SendTransference,
   Transference,
 } from '../../../Domain/Entity/Transference';
+import { toast } from 'react-toastify';
 
 /**
  * @function Hook responsible for the managment of transferences.
@@ -31,14 +32,22 @@ export const useTransference = () => {
     }
   };
 
-  const postTransference = async (transferenceInfo: SendTransference) => {
+  const postTransference = async (
+    transferenceInfo: Exclude<SendTransference, 'userId'>
+  ) => {
     try {
-      const { data, status } = await postTransferenceRequest(transferenceInfo);
+      const { data, status } = await postTransferenceRequest({
+        ...transferenceInfo,
+        userId: auth?.id ?? 0,
+      });
       if (status === 201) {
-        console.log('Enviado', data.data);
+        toast.success(
+          `Transferencia a ${data.data.name} realizada exitosamente!`
+        );
         return status;
       }
     } catch (error: any) {
+      toast.error(error.response.data.error);
       console.log(error);
     }
   };

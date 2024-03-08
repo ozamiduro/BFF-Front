@@ -4,6 +4,7 @@ import { Bank } from '../../Atoms/Icons/Bank';
 import './styles.css';
 import { AuthContext } from '../../../../Domain/Model/Providers';
 import { useNavigate } from 'react-router';
+import { toast } from 'react-toastify';
 
 /**
  * Renders a Header component.
@@ -32,6 +33,8 @@ const Header = () => {
           <ArrowLeft
             onClick={() => {
               setAuth(undefined);
+              localStorage.clear();
+              toast('Hasta luego 👋');
               navigate('/');
             }}
           />
